@@ -1,5 +1,9 @@
 function generateMarkdown(data) {
   return `
+
+## License
+${data.license}
+
 # ${data.title}
 
 ${data.description}
@@ -7,7 +11,6 @@ ${data.description}
 ## Installation
 
 Install dependencies by typing npm install from command line.
-
 
 ## Usage
 
@@ -19,8 +22,7 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 Please make sure to update tests as appropriate.
 
-## License
-${data.license}
+
 `;
 }
 
