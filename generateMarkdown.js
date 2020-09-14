@@ -1,35 +1,56 @@
+const api = require("./api.js");
+const { getAvatar } = require("./index.js");
+
 function generateMarkdown(data) {
-  let contributors = JSON.stringify(
-    `${data.contributors}`);
+  let contributors = JSON.stringify(`${data.contributors}`);
   let nameList = JSON.parse(contributors.replace(/,/g, "  \\n"));
-  console.log(`${nameList}`);
   return `
 
-## License
-${data.license}
 
-## ${data.title}
+![${data.license}]()
 
-## About This App
+# ${data.title}
+
+## Table of Contents
+About This Application  
+Installation  
+Usage  
+Contributing  
+Contributors  
+License  
+Contact Info
+
+## About This Application
 ${data.description}
 
-## Installation Instructions
+## Installation
 
-Install dependencies by typing npm install from command line.
+Install dependencies by typing the following from command line:
+~~~
+npm install
+~~~
 
 ## Usage
-
-To run application, type the following: 
+User will need [Node JS](https://nodejs.org/en/) installed on their computer.  
+To run application, type the following in command line:  
+~~~
 node index.js
+~~~
+
+## Contributing
+${data.contributing}
 
 ## Contributors
 ${nameList}
 
+## License
+This project is licensed under the terms of ${data.license}.
+
 ### Questions or Feedback? Direct your correspondence to:
-Name: ${data.name}  
+ 
+Owner: ${data.name}  
 GitHub: ${data.username}  
 E-mail: ${data.email}
-
 
 `;
 }

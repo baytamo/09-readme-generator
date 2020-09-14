@@ -4,7 +4,6 @@ const inquirer = require("inquirer");
 
 const api = {
   async getUser(username) {
-    console.log("axios works!");
     const queryUrl = `https://api.github.com/users/${username}/repos?per_page=100`;
     try {
       // with this syntax, you don't have to do nested functions
