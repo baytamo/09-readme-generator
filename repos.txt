@@ -1,8 +1,0 @@
-express-brute-mongo
-fn-hooks
-grapesjs
-mongojs-hooks
-nativescript-localstorage
-ngx-fullcalendar
-platos-model
-sqs
