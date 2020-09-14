@@ -1,2 +1,4 @@
 .vscode
 .DS_store
+instructions.md
+node_modules
