@@ -1,9 +1,14 @@
 
-# hello
 
-it me
+## License
+a
 
-## Installation
+## README Generator
+
+## About This App
+This command line based app allows the user to generate a README.md file for their projects.
+
+## Installation Instructions
 
 Install dependencies by typing npm install from command line.
 
@@ -12,10 +17,12 @@ Install dependencies by typing npm install from command line.
 To run application, type the following: 
 node index.js
 
-## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+## Contributors
+Rachael Martinez
 
-Please make sure to update tests as appropriate.
+### Questions or Feedback? Direct your correspondence to:
+Name: Rachael Martinez  
+GitHub: baytamo  
+E-mail: nu.major@gmail.com
 
-## License
-a
+

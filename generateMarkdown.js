@@ -1,14 +1,19 @@
 function generateMarkdown(data) {
+  let contributors = JSON.stringify(
+    `${data.contributors}`);
+  let nameList = JSON.parse(contributors.replace(/,/g, "  \\n"));
+  console.log(`${nameList}`);
   return `
 
 ## License
 ${data.license}
 
-# ${data.title}
+## ${data.title}
 
+## About This App
 ${data.description}
 
-## Installation
+## Installation Instructions
 
 Install dependencies by typing npm install from command line.
 
@@ -17,13 +22,15 @@ Install dependencies by typing npm install from command line.
 To run application, type the following: 
 node index.js
 
-## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+## Contributors
+${nameList}
 
-Please make sure to update tests as appropriate.
+### Questions or Feedback? Direct your correspondence to:
+Name: ${data.name}  
+GitHub: ${data.username}  
+E-mail: ${data.email}
 
 
 `;
 }
-
 module.exports = generateMarkdown;

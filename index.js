@@ -30,12 +30,17 @@ const questions = [
       "Who contributed to this project? List their names, separated by commas.",
   },
   {
+    name: "name",
+    type: "input",
+    message: "What is your full name?"
+},
+  {
       name: "username",
       type: "input",
       message: "Enter your GitHub username"
   },
   {
-      name: "e-mail",
+      name: "email",
       type: "input",
       message: "What is your e-mail?"
   }
@@ -57,7 +62,7 @@ function init() {
     // Write generated MD file to disk
     console.table(answers); 
     getUser(); 
-    writeToFile("newREADME.md", generateMarkdown(answers));
+    writeToFile("README.md", generateMarkdown(answers));
   });
 }
 
