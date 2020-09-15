@@ -10,7 +10,8 @@
 [Usage](#usage)  
 [Tests](#tests)  
 [Contributing](#contributing)  
-[Contributors](#contributors)  
+[Contributors](#contributors)
+[Acknowledgements](#acknowledgements)     
 [License](#license)  
 [Contact Info](#contact)
 
@@ -42,10 +43,14 @@ Users can submit a pull request for further review.
 ## [Contributors](#contributors)
 Rachael Martinez
 
+## [Acknowledgements](#acknowledgements)
+Thank you to my tutor Fred for helping me make sense out of nonsense.  
+Thank you to teaching assistant Amy for pointing me in the right direction.
+
 ## [License](#license)
 This project is licensed under the terms of MIT.
 
-### [Contact Info](#contact)  
+## [Contact Info](#contact)  
 Questions or Feedback? Direct your correspondence to:  
 
 - Owner: Rachael Martinez  
