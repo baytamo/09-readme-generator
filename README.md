@@ -31,8 +31,10 @@ To run application, type the following in command line:
 node index.js
 ~~~
 
+![app demonstration](readme.gif)  
+
 ## [Tests](#tests)
-See Usage for details
+See usage for details
 
 ## [Contributing](#contributing)
 Users can submit a pull request for further review.

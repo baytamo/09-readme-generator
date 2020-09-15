@@ -3,29 +3,20 @@ let licenseURL;
 
 function generateMarkdown(data) {
   if (`${data.license}` === "Apache License 2.0") {
-    console.log("apache-2.0"); 
     license = "Apache";
     licenseURL = "https://www.apache.org/licenses/LICENSE-2.0"
-    console.log(license);
   }
   if (`${data.license}` === "MIT") {
-    console.log("mit");
     license = "MIT";
-    licenseURL = "https://choosealicense.com/licenses/mit/";
-    console.log(license);
-    
+    licenseURL = "https://choosealicense.com/licenses/mit/";    
   }
   if (`${data.license}` === "GNU General Public License v3.0") {
-    console.log("gpl-3.0");
     license = "GPL";
     licenseURL = "https://www.gnu.org/licenses/quick-guide-gplv3.pdf";
-    console.log(license);
   }
   if (`${data.license}` === "ISC License") {
-    console.log("isc");
     license = "ISC";
     licenseURL = "https://www.isc.org/licenses/"
-    console.log(license);
   }
   let contributors = JSON.stringify(`${data.contributors}`);
   let nameList = JSON.parse(contributors.replace(/,/g, "  \\n"));
@@ -50,20 +41,22 @@ ${data.description}
 
 ## [Installation](#installation)
 
-Install dependencies by typing the following from command line:
+${data.installation}  
 ~~~
-npm install
+${data.installCode}
 ~~~
 
 ## [Usage](#usage)
-User will need [Node JS](https://nodejs.org/en/) installed on their computer.  
-To run application, type the following in command line:  
+${data.usage}  
 ~~~
-node index.js
+${data.usageCode}
 ~~~
 
 ## [Tests](#tests)
-${data.test}
+${data.test}  
+~~~
+${data.testCode}
+~~~
 
 ## [Contributing](#contributing)
 ${data.contributing}
@@ -72,9 +65,9 @@ ${data.contributing}
 ${nameList}
 
 ## [License](#license)
-This project is licensed under the terms of ${data.license}.
+This project is licensed under the terms of [${data.license}](${licenseURL}).
 
-### [Contact Info](#contact)  
+## [Contact Info](#contact)  
 Questions or Feedback? Direct your correspondence to:  
 
 - Owner: ${data.name}  
