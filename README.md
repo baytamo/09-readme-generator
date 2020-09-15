@@ -1,6 +1,6 @@
 
 
-![GNU General Public License v3.0](https://img.shields.io/badge/license-GPL-orange)  
+[![MIT](https://img.shields.io/badge/license-MIT-orange)](https://choosealicense.com/licenses/mit/)  
 
 # README Generator
 
@@ -32,7 +32,7 @@ node index.js
 ~~~
 
 ## [Tests](#tests)
-See usage for details
+See Usage for details
 
 ## [Contributing](#contributing)
 Users can submit a pull request for further review.
@@ -41,7 +41,7 @@ Users can submit a pull request for further review.
 Rachael Martinez
 
 ## [License](#license)
-This project is licensed under the terms of GNU General Public License v3.0.
+This project is licensed under the terms of MIT.
 
 ### [Contact Info](#contact)  
 Questions or Feedback? Direct your correspondence to:  

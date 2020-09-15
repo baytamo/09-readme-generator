@@ -1,32 +1,37 @@
 let license;
+let licenseURL;
 
 function generateMarkdown(data) {
   if (`${data.license}` === "Apache License 2.0") {
     console.log("apache-2.0"); 
     license = "Apache";
+    licenseURL = "https://www.apache.org/licenses/LICENSE-2.0"
     console.log(license);
   }
   if (`${data.license}` === "MIT") {
     console.log("mit");
     license = "MIT";
+    licenseURL = "https://choosealicense.com/licenses/mit/";
     console.log(license);
     
   }
   if (`${data.license}` === "GNU General Public License v3.0") {
     console.log("gpl-3.0");
     license = "GPL";
+    licenseURL = "https://www.gnu.org/licenses/quick-guide-gplv3.pdf";
     console.log(license);
   }
   if (`${data.license}` === "ISC License") {
     console.log("isc");
     license = "ISC";
+    licenseURL = "https://www.isc.org/licenses/"
     console.log(license);
   }
   let contributors = JSON.stringify(`${data.contributors}`);
   let nameList = JSON.parse(contributors.replace(/,/g, "  \\n"));
   return `
 
-![${data.license}](https://img.shields.io/badge/license-${license}-orange)  
+[![${data.license}](https://img.shields.io/badge/license-${license}-orange)](${licenseURL})  
 
 # ${data.title}
 
