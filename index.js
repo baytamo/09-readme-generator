@@ -2,8 +2,7 @@ const fs = require("fs");
 const axios = require("axios");
 const inquirer = require("inquirer");
 const generateMarkdown = require("./generateMarkdown.js");
-// const api = require("./api.js");
-const { getUser } = require("./api.js");
+let username;
 
 const questions = [
   {
@@ -20,25 +19,32 @@ const questions = [
     name: "license",
     type: "list",
     message: "Please choose a license governing the terms of your project",
-    choices: ["Apache License 2.0", "MIT", "GNU GPLv3", "ISC License"],
-    // https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/licensing-a-repository#choosing-the-right-license
-
-    // keywords: apache-2.0 , 	mit,	gpl-3.0, 	isc
+    choices: [
+      "Apache License 2.0",
+      "MIT",
+      "GNU General Public License v3.0",
+      "ISC License",
+    ],
+  },
+  {
+    name: "test",
+    type: "input",
+    message: "How can this app be tested?",
   },
   {
     name: "contributing",
     type: "list",
     message: "Who is allowed to contribute to this project?",
     choices: [
-      "Further Contributions are not permitted at this time.",
       "Users can submit a pull request for further review.",
+      "Further contributions are not permitted at this time.",
     ],
   },
   {
     name: "contributors",
     type: "input",
     message:
-      "Who contributed to this project? List their names(including yourself), separated by commas.",
+      "Who contributed to this project? List their names (including yourself), separated by commas.",
   },
   {
     name: "name",
@@ -68,14 +74,33 @@ function writeToFile(fileName, data) {
   });
 }
 
-let getAvatar = function init() {
+function init() {
   inquirer.prompt(questions).then((answers) => {
-    console.table(answers);
-    getUser();
+    username = answers.username;
     writeToFile("README.md", generateMarkdown(answers));
+    getUser();
   });
-};
+}
 
-getAvatar();
+async function getUser() {
+  console.log(username);
+  try {
+    const { data } = await axios.get(
+      `https://api.github.com/users/${username}/repos?per_page=100`
+    );
+    let avatar = data.map((data) => data.owner.avatar_url)[0];
+    console.log(avatar);
+    let bioImage = `![GitHub bio image](${avatar})`;
 
-module.exports = getAvatar;
+    fs.appendFile("README.md", bioImage, (err) => {
+      if (err) throw err;
+      console.log("bio image added to readme file");
+    });
+  } catch (e) {
+    console.log(e);
+  }
+}
+
+init();
+
+module.exports = init;
