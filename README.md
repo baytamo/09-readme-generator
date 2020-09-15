@@ -48,7 +48,7 @@ Thank you to my tutor Fred for helping me make sense out of nonsense.
 Thank you to teaching assistant Amy for pointing me in the right direction.
 
 ## [License](#license)
-This project is licensed under the terms of MIT.
+This project is licensed under the terms of [MIT](https://choosealicense.com/licenses/mit/).
 
 ## [Contact Info](#contact)  
 Questions or Feedback? Direct your correspondence to:  
