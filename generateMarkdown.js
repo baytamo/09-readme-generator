@@ -31,48 +31,50 @@ function generateMarkdown(data) {
 # ${data.title}
 
 ## Table of Contents
-[About This Application]()  
-[Installation]()  
-[Usage]()  
-[Contributing]()  
-[Contributors]()  
-[License]()  
-[Contact Info]()
+[About This Application](#description)  
+[Installation](#installation)  
+[Usage](#usage)  
+[Tests](#tests)  
+[Contributing](#contributing)  
+[Contributors](#contributors)  
+[License](#license)  
+[Contact Info](#contact)
 
-## About This Application
+## [About This Application](#description)
 ${data.description}
 
-## Installation
+## [Installation](#installation)
 
 Install dependencies by typing the following from command line:
 ~~~
 npm install
 ~~~
 
-## Usage
+## [Usage](#usage)
 User will need [Node JS](https://nodejs.org/en/) installed on their computer.  
 To run application, type the following in command line:  
 ~~~
 node index.js
 ~~~
 
-## Tests
+## [Tests](#tests)
 ${data.test}
 
-## Contributing
+## [Contributing](#contributing)
 ${data.contributing}
 
-## Contributors
+## [Contributors](#contributors)
 ${nameList}
 
-## License
+## [License](#license)
 This project is licensed under the terms of ${data.license}.
 
-### Contact Info  
+### [Contact Info](#contact)  
 Questions or Feedback? Direct your correspondence to:  
-Owner: ${data.name}
-GitHub: [${data.username}](https://github.com/${data.username})  
-E-mail: ${data.email}
+
+- Owner: ${data.name}  
+- GitHub: [${data.username}](https://github.com/${data.username})  
+- E-mail: ${data.email}
 
 `;
 }
