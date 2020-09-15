@@ -69,6 +69,7 @@ const questions = [
     choices: [
       "Users can submit a pull request for further review.",
       "Further contributions are not permitted at this time.",
+      "Please report issues by contacting owner directly."
     ],
   },
   {
