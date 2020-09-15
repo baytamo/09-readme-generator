@@ -10,8 +10,8 @@
 [Usage](#usage)  
 [Tests](#tests)  
 [Contributing](#contributing)  
-[Contributors](#contributors)
-[Acknowledgements](#acknowledgements)     
+[Contributors](#contributors)  
+[Acknowledgements](#acknowledgements)  
 [License](#license)  
 [Contact Info](#contact)
 
